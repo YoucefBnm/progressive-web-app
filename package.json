@@ -1,0 +1,18 @@
+{
+  "name": "pwa-2",
+  "version": "1.0.0",
+  "description": "progressive-app weather-app",
+  "main": "app.js",
+  "scripts": {
+    "start": "live-server"
+  },
+  "keywords": [
+    "progressive-app",
+    "weather-app"
+  ],
+  "author": "Youcef Bnm",
+  "license": "ISC",
+  "devDependencies": {
+    "live-server": "^0.1.0"
+  }
+}
