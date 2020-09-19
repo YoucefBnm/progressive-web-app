@@ -82,3 +82,14 @@ if(localStorage.getItem('location') === null) {
 // convert to celsius || C=(F-32)X5/9
 const convertToCelsius = (deg) => deg.innerHTML = `${((getDegree - 32)*5/9).toFixed(2)}<sup>o</sup>C`
 degreeValue.addEventListener('click', ()=> convertToCelsius(degreeValue))
+
+// check if Service Worker is supported
+if('serviceWorker' in navigator) {
+    // register service worker on window load
+    window.addEventListener('load', () => {
+        navigator.serviceWorker
+            .register('../service-worker.js')
+            .then(reg => console.log('Service Worker: Registred Successfully !!'))
+            .catch(err => console.log(`Service Worker: Error: ${err}`))
+    })
+}
